@@ -95,14 +95,16 @@ def scrape_role(
     for kw in keywords:
         logger.info(f"Scraping '{kw}' on {sites} in {location}...")
         try:
-            df = scrape_jobs(
+            kwargs = dict(
                 site_name=sites,
                 search_term=kw,
                 location=location,
                 results_wanted=results_wanted,
-                is_remote=is_remote,
                 description_format="markdown",
             )
+            if is_remote is not None:
+                kwargs["is_remote"] = is_remote
+            df = scrape_jobs(**kwargs)
             if df is not None and not df.empty:
                 logger.info(f"  Found {len(df)} jobs for '{kw}'")
                 _store_jobs(df, kw, role)
