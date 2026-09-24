@@ -27,8 +27,16 @@ env/
 .env/
 
 # Project specific
-received_files/
+output/*.csv
+output/*.json
+output/*.db
+resumes/*.pdf
+!resumes/.gitkeep
+!output/.gitkeep
 *.log
+
+# Model cache
+.cache/
 
 # IDEs and editors
 .idea/
@@ -43,16 +51,8 @@ received_files/
 # OS specific
 .DS_Store
 Thumbs.db
-*.db
-*.sqlite3
 
 # Environment variables
 .env
 .env.local
 .env.*.local
-
-# Debug logs
-debug.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
