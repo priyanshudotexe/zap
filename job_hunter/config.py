@@ -1,6 +1,28 @@
 """Search profiles and configuration for job hunting."""
 
 ROLE_PROFILES = {
+    "apm": {
+        "name": "Associate Product Manager / Product Analyst",
+        "keywords": [
+            "associate product manager",
+            "APM",
+            "product analyst",
+            "junior product manager",
+            "product management analyst",
+            "product associate",
+            "business analyst product",
+            "product operations analyst",
+            "product strategy analyst",
+            "entry level product manager",
+        ],
+        "title_boost": [
+            "associate product manager",
+            "apm",
+            "product analyst",
+            "junior product manager",
+            "product associate",
+        ],
+    },
     "pm": {
         "name": "Product Management",
         "keywords": [
@@ -47,9 +69,9 @@ ROLE_PROFILES = {
     },
 }
 
-DEFAULT_LOCATIONS = ["United States", "Remote"]
+DEFAULT_LOCATIONS = ["India"]
 
-SEARCH_SITES = ["linkedin", "indeed", "glassdoor", "zip_recruiter"]
+SEARCH_SITES = ["linkedin", "indeed", "glassdoor"]
 
 RESULTS_PER_KEYWORD = 25
 

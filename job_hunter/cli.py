@@ -38,7 +38,7 @@ def cli():
     type=click.Choice(list(ROLE_PROFILES.keys()), case_sensitive=False),
     help="Job role profile to search",
 )
-@click.option("--location", "-l", default="United States", help="Job location filter")
+@click.option("--location", "-l", default="India", help="Job location filter")
 @click.option("--remote", is_flag=True, default=False, help="Only remote jobs")
 @click.option(
     "--sites",
